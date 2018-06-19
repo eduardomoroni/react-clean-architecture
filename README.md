@@ -1,0 +1,9 @@
+# Sharing Bussiness logic between React Native and Web
+I'm on my way to write (and code) a realistic way of achieving reusing domain between both native and web apps. I'll use and adaptation of Clean Architecture and some Domain-driven design.
+This is a realistic approach, what I mean by that is: It's simple enough to be applicable and Robust enough to have it in a production environment.
+
+# Work in progress
+I've been pretty busy lately, so I'll write as much as possible.
+
+## Thanks
+- [Microsoft](https://github.com/Microsoft/TypeScript-React-Native-Starter) for provide an react native starter kit with all TypeScript configuration.
