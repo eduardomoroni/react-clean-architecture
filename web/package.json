@@ -1,8 +1,10 @@
 {
   "name": "web",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "author": "eduardomoroni",
+  "license": "MIT",
   "dependencies": {
+    "core": "file:../core",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "2.16.0"
