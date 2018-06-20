@@ -6,4 +6,6 @@ This is a realistic approach, what I mean by that is: It's simple enough to be a
 I've been pretty busy lately, so I'll write as much as possible.
 
 ## Thanks
-- [Microsoft](https://github.com/Microsoft/TypeScript-React-Native-Starter) for provide an react native starter kit with all TypeScript configuration.
+- Microsoft for provide a [react native](https://github.com/Microsoft/TypeScript-React-Native-Starter) starter kit with all TypeScript configuration.
+- [Will Monk](https://github.com/wmonk) for provide a [react](https://github.com/wmonk/create-react-app-typescript) starter kit with all TypeScript configuration.
+
