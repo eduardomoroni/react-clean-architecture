@@ -5,6 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "preinstall": "cd ../core && npm run build",
     "test": "jest"
   },
   "dependencies": {

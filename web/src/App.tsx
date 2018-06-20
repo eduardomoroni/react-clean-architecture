@@ -1,3 +1,4 @@
+import { Counter } from 'core'
 import * as React from 'react';
 import './App.css';
 
@@ -5,6 +6,7 @@ import logo from './logo.svg';
 
 class App extends React.Component {
   public render() {
+    const counter = new Counter(1);
     return (
       <div className="App">
         <header className="App-header">
@@ -13,6 +15,9 @@ class App extends React.Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p className="App-intro">
+          Counter is: {counter.count}
         </p>
       </div>
     );

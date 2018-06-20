@@ -6,6 +6,7 @@ import {
   Text,
   View
 } from 'react-native';
+import { Counter } from "core";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -14,10 +15,11 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    const counter = new Counter(1);
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -28,6 +30,9 @@ export default class App extends Component<Props> {
         </Text>
         <Text style={styles.instructions}>
           {instructions}
+        </Text>
+        <Text style={styles.instructions}>
+          Counter is: {counter.count}
         </Text>
       </View>
     );
