@@ -25,18 +25,16 @@ export const decrementCounterAction = (qty: number): ActionType => ({
   qty
 });
 
-// Reducers shouldn't mutate objects, I kept like this for simplicity
 const incrementReducer = (state: StateSliceType, action: ActionType): StateSliceType => {
   const interactor = new CounterInteractor(state);
   interactor.increment(action.qty);
-  return state;
+  return new Counter(interactor.counter.count);
 };
 
-// Reducers shouldn't mutate objects, I kept like this for simplicity
 const decrementReducer = (state: StateSliceType, action: ActionType): StateSliceType => {
   const interactor = new CounterInteractor(state);
   interactor.decrement(action.qty);
-  return state;
+  return new Counter(interactor.counter.count);
 };
 
 export const counterReducer = (
