@@ -5,6 +5,9 @@ This is a realistic approach, what I mean by that is: It's simple enough to be a
 # Work in progress
 I've been pretty busy lately, so I'll write as much as possible.
 
+## References
+- https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
+
 ## Thanks
 - Microsoft for provide a [react native](https://github.com/Microsoft/TypeScript-React-Native-Starter) starter kit with all TypeScript configuration.
 - [Will Monk](https://github.com/wmonk) for provide a [react](https://github.com/wmonk/create-react-app-typescript) starter kit with all TypeScript configuration.
