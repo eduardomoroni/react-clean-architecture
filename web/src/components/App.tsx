@@ -1,8 +1,8 @@
 import { Counter } from 'core'
 import * as React from 'react';
-import './App.css';
+import '../stylesheets/App.css';
 
-import logo from './logo.svg';
+import logo from '../assets/logo.svg';
 
 class App extends React.Component {
   public render() {
