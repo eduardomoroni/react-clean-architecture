@@ -3,8 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './components/AppPresenter';
 import './stylesheets/index.css';
 
 const ConnectedApp = (
@@ -17,5 +16,3 @@ ReactDOM.render(
   ConnectedApp,
   document.getElementById('root') as HTMLElement
 );
-
-registerServiceWorker();
