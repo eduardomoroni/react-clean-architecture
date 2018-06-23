@@ -5,8 +5,8 @@ export class Credential {
   _password: string;
 
   constructor(email: string, password: string) {
-    if (isInsecure(password)) {
-      throw new Error('Your password must contains letter and numbers');
+    if (isInvalid(password)) {
+      throw new Error('Your password must contains only letter and numbers');
     }
 
     this._password = password;
@@ -22,7 +22,7 @@ export class Credential {
   }
 }
 
-function isInsecure(address: string) {
-  const securePasswordRegex = /^[a-zA-Z0-9_.-]*$/;
-  return !securePasswordRegex.test(address);
+function isInvalid(password: string) {
+  const passwordRegex = /^[a-zA-Z0-9_.-]*$/;
+  return !passwordRegex.test(password);
 }

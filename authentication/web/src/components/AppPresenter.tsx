@@ -8,7 +8,7 @@ import {Credential, signInAction, StateType, User, userSelector} from "core";
 import {SignInButton} from "./SignInButton";
 
 interface Props {
-  user?: User,
+  user: User | null,
   dispatchSignIn: (credential: Credential) => void;
 }
 

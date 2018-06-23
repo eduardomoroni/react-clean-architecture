@@ -3,7 +3,7 @@ import "../stylesheets/App.css";
 import {User} from "core";
 
 interface PropsType {
-  user?: User,
+  user: User | null,
 }
 
 export const UserComponent = (props: PropsType) => {

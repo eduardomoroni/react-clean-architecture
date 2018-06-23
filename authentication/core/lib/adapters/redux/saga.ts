@@ -25,7 +25,7 @@ function* signInSaga(action: SignInActionType) {
     yield put(updateUserAction(user));
   } catch (error) {
     console.error(error);
-    // DO SOMETHING ELSE WITH ERROR
+    // DO SOMETHING ELSE
   }
 }
 
