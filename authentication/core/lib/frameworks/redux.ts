@@ -1,25 +1,23 @@
-import { combineReducers, applyMiddleware, createStore } from "redux";
-import { createLogger } from "redux-logger";
-import { userReducer } from "../adapters/redux";
-import { User } from "../entities";
-
-export interface StateType {
-  user: User,
-}
-
-const reducers = {
-  user: userReducer,
-};
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import {createLogger} from "redux-logger";
+import createSagaMiddleware from 'redux-saga';
+import {rootSaga} from "../adapters/redux/saga";
+import {rootReducer} from "../adapters/redux/reducer";
 
 export const configureStore = () => {
   const middleware = [];
+  const sagaMiddleware = createSagaMiddleware();
 
+  middleware.push(sagaMiddleware);
   if (process.env.NODE_ENV !== "production") {
     middleware.push(createLogger());
   }
 
-  return createStore(
-    combineReducers(reducers),
+  const store = createStore(
+    combineReducers(rootReducer),
     applyMiddleware(...middleware),
   );
+
+  sagaMiddleware.run(rootSaga);
+  return store;
 };

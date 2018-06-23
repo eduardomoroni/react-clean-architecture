@@ -11,8 +11,7 @@ export class SignInInteractor {
     this.signInService =  signInService;
   }
 
-  async signInWithEmailAndPassword(email: string, password: string): Promise<User> {
-    const credential = new Credential(email, password);
+  async signIn(credential: Credential): Promise<User> {
     return this.signInService.signInWithCredential(credential);
   }
 }
