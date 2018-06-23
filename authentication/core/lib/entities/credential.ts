@@ -3,11 +3,15 @@ import {Email} from "./email";
 
 export class Credential {
   _email: Email;
-  _password: Password;
+  _password: string;
 
   constructor(email: string, password: string) {
-      this._email = new Email(email);
-      this._password = new Password(password);
+    if (isInsecure(password)) {
+      throw new Error('Your password must contains letter and numbers');
+    }
+
+    this._password = password;
+    this._email = new Email(email);
   }
 
   get email(): string {
@@ -17,4 +21,9 @@ export class Credential {
   get password(): string {
     return this._password.password
   }
+}
+
+function isInsecure(address: string) {
+  const securePasswordRegex = /^[a-zA-Z0-9_.-]*$/;
+  return !securePasswordRegex.test(address);
 }

@@ -1,3 +1,5 @@
+// avoiding primitive obssession
+// https://refactoring.guru/smells/primitive-obsession
 export class Email {
   address: string;
 
