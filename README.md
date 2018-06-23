@@ -5,7 +5,11 @@ This is a realistic approach, what I mean by that is: It's simple enough to be a
 ## Work in progress
 I've been pretty busy lately, so I'll write as much as possible.
 
+## Philosophy
+![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)
+
 ## Communication flow
+![communication-flow-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/communication-flow.jpg)
 
 ## Folder Structure
 This repository contains 2 examples of how to implement react following clean architecture, both follow same folder structure which represents diagram showed above.
