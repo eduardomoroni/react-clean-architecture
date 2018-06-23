@@ -4,7 +4,7 @@ import {ChangeEvent} from "react";
 import "../stylesheets/App.css";
 
 interface PropsType {
-  onClick: (email: string, password: string) => void,
+  onClick: (firstName: string, lastName: string, email: string, password: string) => void,
 }
 
 interface StateType {
@@ -32,8 +32,8 @@ export class SignUpComponent extends React.Component<PropsType, StateType> {
   };
 
   handleSubmit = () => {
-    const { email, password } = this.state;
-    this.props.onClick(email, password);
+    const { email, password, firstName, lastName } = this.state;
+    this.props.onClick(firstName, lastName, email, password);
   };
 
   render() {

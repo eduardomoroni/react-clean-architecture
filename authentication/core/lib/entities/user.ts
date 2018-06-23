@@ -11,8 +11,8 @@ export class User {
     }
 
     this._email = new Email(email);
-    this._firstName = firstName;
-    this._lastName = lastName;
+    this._firstName = firstName.toLocaleLowerCase();
+    this._lastName = lastName.toLocaleLowerCase();
   }
 
   get email(): string {

@@ -8,12 +8,13 @@ export interface SignUpService {
 export class SignUpInteractor {
   signUpService: SignUpService;
 
-  constructor(signUpService: SignUpService){
+  constructor(signUpService: SignUpService) {
     this.signUpService =  signUpService;
   }
 
-  async signInWithEmailAndPassword(firstName: string, lastName: string, credential: Credential): Promise<User> {
-    if (this.signUpService.verifyExistingEmail(credential._email)) {
+  async signUp(firstName: string, lastName: string, credential: Credential): Promise<User> {
+    const emailInUse = await this.signUpService.verifyExistingEmail(credential._email);
+    if (emailInUse) {
       throw new Error("There's an User with this email, if you forgot your pass...");
     }
 
