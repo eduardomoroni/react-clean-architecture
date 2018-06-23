@@ -1,14 +1,14 @@
 import { combineReducers, applyMiddleware, createStore } from "redux";
 import { createLogger } from "redux-logger";
-import { counterReducer } from "../adapters/redux";
-import { Counter } from "../entities";
+import { userReducer } from "../adapters/redux";
+import { User } from "../entities";
 
-export type StateType = {
-  counter: Counter,
-};
+export interface StateType {
+  user: User,
+}
 
 const reducers = {
-  counter: counterReducer,
+  user: userReducer,
 };
 
 export const configureStore = () => {

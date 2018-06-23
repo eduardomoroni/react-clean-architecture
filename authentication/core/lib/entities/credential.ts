@@ -1,4 +1,3 @@
-import {Password} from "./password";
 import {Email} from "./email";
 
 export class Credential {
@@ -19,7 +18,7 @@ export class Credential {
   }
 
   get password(): string {
-    return this._password.password
+    return this._password
   }
 }
 

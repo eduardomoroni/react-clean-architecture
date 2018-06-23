@@ -1,7 +1,7 @@
 import {Credential, User} from "../entities";
 
 export interface SignInService {
-  signInWithCredential: (Credential) => Promise<User>;
+  signInWithCredential: (credential: Credential) => Promise<User>;
 }
 
 export class SignInInteractor {
