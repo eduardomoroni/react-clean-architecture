@@ -2,7 +2,13 @@ import {User} from "../../entities";
 import {initialState, StateType} from "./state";
 
 const UPDATE_USER = "user/update";
+const SIGN_OUT = "user/signOut";
+
 type StateSlice = StateType["user"];
+
+export interface ActionType {
+  type: string,
+}
 
 export interface UpdateUserActionType {
   type: string,
@@ -14,7 +20,11 @@ export const updateUserAction = (user: User | null): UpdateUserActionType => ({
   type: UPDATE_USER,
   user
 });
+export const signOutAction = (): ActionType => ({
+  type: SIGN_OUT,
+});
 
+const signOutHandler = () => null;
 const updateHandler = (
   state: StateSlice,
   action: UpdateUserActionType
@@ -29,6 +39,8 @@ export const userReducer = (
   switch (action.type) {
     case UPDATE_USER:
       return updateHandler(state, action);
+    case SIGN_OUT:
+      return signOutHandler();
     default:
       return state;
   }

@@ -13,8 +13,8 @@ interface StateType {
 
 export class SignComponent extends React.Component<PropsType, StateType> {
   state = {
-    email: '',
-    password: '',
+    email: 'email@email.com',
+    password: 'abc123',
   };
 
   handleChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
@@ -41,9 +41,9 @@ export class SignComponent extends React.Component<PropsType, StateType> {
         </label>
         <label>
           password:
-          <input type="text" value={this.state.password} onChange={this.handleChangePassword} />
+          <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
         </label>
-        <button type="button" onClick={this.handleSubmit}>Login</button>
+        <button type="button" onClick={this.handleSubmit}>SIGN IN</button>
       </form>
     );
   }
