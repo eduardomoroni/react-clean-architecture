@@ -1,6 +1,6 @@
 import {Email} from "./email";
 
-export class Person {
+export class User {
   _firstName: string;
   _lastName: string;
   _email: Email;

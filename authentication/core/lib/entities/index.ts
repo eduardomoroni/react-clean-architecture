@@ -1,2 +1,3 @@
 export * from "./credential";
-export * from "./person";
+export * from "./user";
+export * from "./email";
