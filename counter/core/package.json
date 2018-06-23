@@ -1,0 +1,20 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "author": "eduardomoroni",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "2.9.2"
+  },
+  "dependencies": {
+    "@types/node": "^10.3.4",
+    "@types/redux-logger": "^3.0.6",
+    "redux": "4.0.0",
+    "redux-logger": "3.0.6"
+  }
+}

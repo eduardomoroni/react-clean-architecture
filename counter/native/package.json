@@ -1,0 +1,27 @@
+{
+  "name": "native",
+  "version": "1.0.0",
+  "author": "eduardomoroni",
+  "license": "MIT",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "preinstall": "cd ../core && npm run build"
+  },
+  "dependencies": {
+    "core": "file:../core",
+    "react": "16.3.0-alpha.1",
+    "react-native": "0.54.3",
+    "react-redux": "5.0.7"
+  },
+  "devDependencies": {
+    "@types/jest": "22.2.2",
+    "@types/react": "16.0.41",
+    "@types/react-native": "0.52.19",
+    "@types/react-redux": "6.0.2",
+    "babel-preset-react-native": "4.0.0",
+    "react-native-typescript-transformer": "1.2.3",
+    "typescript": "2.8.1"
+  }
+}
