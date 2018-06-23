@@ -10,8 +10,8 @@ type ActionType = {
 };
 
 const INITIAL_STATE = new Counter(0);
-const INCREMENT = 'counter/increment';
-const DECREMENT = 'counter/decrement';
+const INCREMENT = "counter/increment";
+const DECREMENT = "counter/decrement";
 
 export const counterSelector = (state: StateType): Counter => state.counter;
 

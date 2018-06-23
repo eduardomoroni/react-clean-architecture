@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 
-import logo from '../assets/logo.svg';
-import '../stylesheets/App.css';
+import logo from "../assets/logo.svg";
+import "../stylesheets/App.css";
 
 export const Header = () => {
   return (

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import '../stylesheets/App.css';
+import * as React from "react";
+import "../stylesheets/App.css";
 
 interface IProps {
   counter: number,

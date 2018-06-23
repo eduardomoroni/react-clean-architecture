@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {ReactNode} from 'react';
+import * as React from "react";
+import {ReactNode} from "react";
 import {View} from "react-native";
 import {styles} from "../stylesheets/styles";
 

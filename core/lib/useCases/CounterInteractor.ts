@@ -1,6 +1,6 @@
 import { Counter } from "../entities";
 
-// For sake of simplicity, I'll keep more than one use case on this interactor
+// For sake of simplicity, I"ll keep more than one use case on this interactor
 export class CounterInteractor {
   static MAX_SIZE: number = 10;
   static MIN_SIZE: number = 0;

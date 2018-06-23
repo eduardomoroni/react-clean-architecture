@@ -1,6 +1,6 @@
-import * as React from 'react';
-import {ReactNode} from 'react';
-import '../stylesheets/App.css';
+import * as React from "react";
+import {ReactNode} from "react";
+import "../stylesheets/App.css";
 
 interface Props {
   children: ReactNode

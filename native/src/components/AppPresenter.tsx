@@ -1,5 +1,5 @@
 import {Counter, counterSelector, decrementCounterAction, incrementCounterAction, StateType} from "core"
-import * as React from 'react';
+import * as React from "react";
 import {connect} from "react-redux";
 import {Header} from "./Header";
 import {CounterComponent} from "./Counter";
