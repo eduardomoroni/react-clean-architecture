@@ -1,14 +1,20 @@
-import {Counter, counterSelector, decrementCounterAction, incrementCounterAction, StateType} from "core"
+import {
+  Counter,
+  counterSelector,
+  decrementCounterAction,
+  incrementCounterAction,
+  StateType,
+} from "core";
 import * as React from "react";
-import {connect} from "react-redux";
-import {Header} from "./Header";
-import {CounterComponent} from "./Counter";
-import {AppWrapper} from "./AppWrapper";
+import { connect } from "react-redux";
+import { Header } from "./Header";
+import { CounterComponent } from "./Counter";
+import { AppWrapper } from "./AppWrapper";
 
 interface IProps {
-  counter: Counter,
-  decrement: (qty: number) => void,
-  increment: (qty: number) => void,
+  counter: Counter;
+  decrement: (qty: number) => void;
+  increment: (qty: number) => void;
 }
 
 export const AppModel = (props: IProps) => {
@@ -18,7 +24,11 @@ export const AppModel = (props: IProps) => {
   return (
     <AppWrapper>
       <Header />
-      <CounterComponent decrement={decrement} increment={increment} counter={props.counter.count}/>
+      <CounterComponent
+        decrement={decrement}
+        increment={increment}
+        counter={props.counter.count}
+      />
     </AppWrapper>
   );
 };
@@ -32,4 +42,7 @@ const mapDispatchToProps = {
   increment: incrementCounterAction,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppModel);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(AppModel);

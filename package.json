@@ -4,7 +4,7 @@
   "description": "Working example to apply clean architecture to react codebases",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write '*/src/**/*.ts'"
+    "prettier": "prettier --write '**/src/**/*.ts?(x)'"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/eduardomoroni/react-reusable-clean-architecture#readme",
   "devDependencies": {
-    "prettier": "^1.13.5",
+    "prettier": "1.13.5",
     "prettierrc": "0.0.0-5"
   }
 }

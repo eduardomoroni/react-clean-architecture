@@ -3,9 +3,11 @@ import * as React from "react";
 import "../stylesheets/App.css";
 
 interface PropsType {
-  onClick: () => void,
+  onClick: () => void;
 }
 
 export const SignOutButton = (props: PropsType) => (
-  <button type="button" onClick={props.onClick}>SIGN OUT</button>
+  <button type="button" onClick={props.onClick}>
+    SIGN OUT
+  </button>
 );

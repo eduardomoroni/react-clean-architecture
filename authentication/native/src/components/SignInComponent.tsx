@@ -1,27 +1,27 @@
 import * as React from "react";
-import {Button, TextInput, View} from "react-native";
+import { Button, TextInput, View } from "react-native";
 
 interface PropsType {
-  onClick: (email: string, password: string) => void,
+  onClick: (email: string, password: string) => void;
 }
 
 interface StateType {
-  email: string,
-  password: string,
+  email: string;
+  password: string;
 }
 
 export class SignInComponent extends React.Component<PropsType, StateType> {
   state = {
-    email: 'email@email.com',
-    password: 'abc123',
+    email: "email@email.com",
+    password: "abc123",
   };
 
   handleChangeEmail = (email: string) => {
-    this.setState({email});
+    this.setState({ email });
   };
 
   handleChangePassword = (password: string) => {
-    this.setState({password});
+    this.setState({ password });
   };
 
   handleSubmit = () => {
@@ -45,15 +45,11 @@ export class SignInComponent extends React.Component<PropsType, StateType> {
           onChangeText={this.handleChangePassword}
           onSubmitEditing={this.handleSubmit}
           placeholder="Password"
-          returnKeyType={'done'}
+          returnKeyType={"done"}
           secureTextEntry
           value={this.state.password}
         />
-        <Button
-          onPress={this.handleSubmit}
-          title="Sign In"
-          color="#841584"
-        />
+        <Button onPress={this.handleSubmit} title="Sign In" color="#841584" />
       </View>
     );
   }

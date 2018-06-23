@@ -1,18 +1,16 @@
 import { configureStore } from "core";
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-import App from './components/AppPresenter';
-import './stylesheets/index.css';
+import App from "./components/AppPresenter";
+import "./stylesheets/index.css";
 
+const element: HTMLElement = document.getElementById("root");
 const ConnectedApp = (
   <Provider store={configureStore()}>
-    <App/>
+    <App />
   </Provider>
 );
 
-ReactDOM.render(
-  ConnectedApp,
-  document.getElementById('root') as HTMLElement
-);
+ReactDOM.render(ConnectedApp, element);

@@ -1,39 +1,44 @@
 import * as React from "react";
-import {Button, TextInput, View} from "react-native";
+import { Button, TextInput, View } from "react-native";
 
 interface PropsType {
-  onClick: (firstName: string, lastName: string, email: string, password: string) => void,
+  onClick: (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+  ) => void;
 }
 
 interface StateType {
-  firstName: string,
-  lastName: string,
-  email: string,
-  password: string,
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
 }
 
 export class SignUpComponent extends React.Component<PropsType, StateType> {
   state = {
-    firstName: 'EduarDO',
-    lastName: 'MoRoNi',
-    email: 'email@email.com',
-    password: 'abc123',
+    firstName: "EduarDO",
+    lastName: "MoRoNi",
+    email: "email@email.com",
+    password: "abc123",
   };
 
   handleChangeEmail = (email: string) => {
-    this.setState({email});
+    this.setState({ email });
   };
 
   handleChangePassword = (password: string) => {
-    this.setState({password});
+    this.setState({ password });
   };
 
   handleChangeFirstName = (firstName: string) => {
-    this.setState({firstName});
+    this.setState({ firstName });
   };
 
   handleChangeLastName = (lastName: string) => {
-    this.setState({lastName});
+    this.setState({ lastName });
   };
 
   handleSubmit = () => {
@@ -65,15 +70,11 @@ export class SignUpComponent extends React.Component<PropsType, StateType> {
           onChangeText={this.handleChangePassword}
           onSubmitEditing={this.handleSubmit}
           placeholder="Password"
-          returnKeyType={'done'}
+          returnKeyType={"done"}
           secureTextEntry
           value={this.state.password}
         />
-        <Button
-          onPress={this.handleSubmit}
-          title="Sign Up"
-          color="#841584"
-        />
+        <Button onPress={this.handleSubmit} title="Sign Up" color="#841584" />
       </View>
     );
   }
