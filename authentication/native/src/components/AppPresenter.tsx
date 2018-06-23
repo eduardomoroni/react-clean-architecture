@@ -1,35 +1,49 @@
-import {Counter, counterSelector, decrementCounterAction, incrementCounterAction, StateType} from "core"
 import * as React from "react";
 import {connect} from "react-redux";
-import {Header} from "./Header";
-import {CounterComponent} from "./Counter";
-import {AppWrapper} from "./AppWrapper";
+import {Credential, signInAction, signOutAction, signUpAction, StateType, User, userSelector} from "core";
 
-interface IProps {
-  counter: Counter,
-  decrement: (qty: number) => void,
-  increment: (qty: number) => void,
+import {Header} from "./Header";
+import {AppWrapper} from "./AppWrapper";
+import {UserComponent} from "./UserComponent";
+import {SignInComponent} from "./SignInComponent";
+import {SignOutButton} from "./SignOutButton";
+import {SignUpComponent} from "./SignUpComponent";
+
+interface Props {
+  user: User | null,
+  dispatchSignIn: (credential: Credential) => void;
+  dispatchSignUp: (firstName: string, lastName: string, credential: Credential) => void;
+  dispatchSignOut: () => void;
 }
 
-export const AppModel = (props: IProps) => {
-  const increment = () => props.increment(1);
-  const decrement = () => props.decrement(1);
+export const AppModel = (props: Props) => {
+  const onSignIn = (email: string, password: string) => props.dispatchSignIn(new Credential(email, password));
+  const onSignUp = (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) => props.dispatchSignUp(firstName, lastName, new Credential(email, password));
 
   return (
     <AppWrapper>
       <Header />
-      <CounterComponent decrement={decrement} increment={increment} counter={props.counter.count}/>
+      <UserComponent user={props.user} />
+      <SignInComponent onClick={onSignIn}/>
+      <SignUpComponent onClick={onSignUp}/>
+      <SignOutButton onClick={props.dispatchSignOut}/>
     </AppWrapper>
   );
 };
 
 const mapStateToProps = (state: StateType) => ({
-  counter: counterSelector(state),
+  user: userSelector(state),
 });
 
 const mapDispatchToProps = {
-  decrement: decrementCounterAction,
-  increment: incrementCounterAction,
+  dispatchSignIn: signInAction,
+  dispatchSignUp: signUpAction,
+  dispatchSignOut: signOutAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppModel);

@@ -38,7 +38,7 @@ export class SignUpComponent extends React.Component<PropsType, StateType> {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <label>
           firstName:
           <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleInputChange} />
