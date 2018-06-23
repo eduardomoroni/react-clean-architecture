@@ -1,13 +1,13 @@
 {
   "description": "Working example to apply clean architecture to react codebases",
-  "name": "react-clean-reusable-architecture",
+  "name": "react-clean-architecture",
   "version": "1.0.0",
   "author": "eduardomoroni",
   "license": "MIT",
-  "homepage": "https://github.com/eduardomoroni/react-reusable-clean-architecture#readme",
+  "homepage": "https://github.com/eduardomoroni/react-clean-architecture#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eduardomoroni/react-reusable-clean-architecture.git"
+    "url": "git+https://github.com/eduardomoroni/react-clean-architecture.git"
   },
   "keywords": [
     "react",

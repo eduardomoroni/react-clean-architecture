@@ -5,10 +5,10 @@ This is a realistic approach, what I mean by that is: It's simple enough to be a
 ## Work in progress
 I've been pretty busy lately, so I'll write as much as possible.
 
+## Communication flow
 
 ## Folder Structure
-This repository contains 2 examples of how to implement react following clean architecture, both follow same folder structure
-which represents the most famous clean architecture diagram showed above.
+This repository contains 2 examples of how to implement react following clean architecture, both follow same folder structure which represents diagram showed above.
 ```
 ./counter
 ├── core
