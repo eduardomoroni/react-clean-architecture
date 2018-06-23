@@ -6,8 +6,9 @@ import "../stylesheets/App.css";
 import {Header} from "./Header";
 import {AppWrapper} from "./AppWrapper";
 import {UserComponent} from "./UserComponent";
-import {SignComponent} from "./SignComponent";
+import {SignInComponent} from "./SignInComponent";
 import {SignOutButton} from "./SignOutButton";
+import {SignUpComponent} from "./SignUpComponent";
 
 interface Props {
   user: User | null,
@@ -16,13 +17,15 @@ interface Props {
 }
 
 export const AppModel = (props: Props) => {
-  const onLogin = (email: string, password: string) => props.dispatchSignIn(new Credential(email, password));
+  const onSignIn = (email: string, password: string) => props.dispatchSignIn(new Credential(email, password));
+  const onSignUp = (email: string, password: string) => props.dispatchSignIn(new Credential(email, password));
 
   return (
     <AppWrapper>
       <Header />
       <UserComponent user={props.user} />
-      <SignComponent onClick={onLogin}/>
+      <SignInComponent onClick={onSignIn}/>
+      <SignUpComponent onClick={onSignUp}/>
       <SignOutButton onClick={props.dispatchSignOut}/>
     </AppWrapper>
   );

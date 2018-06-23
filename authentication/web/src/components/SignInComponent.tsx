@@ -11,7 +11,7 @@ interface StateType {
   password: string,
 }
 
-export class SignComponent extends React.Component<PropsType, StateType> {
+export class SignInComponent extends React.Component<PropsType, StateType> {
   state = {
     email: 'email@email.com',
     password: 'abc123',
