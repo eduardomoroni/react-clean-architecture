@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import App from "./components/AppPresenter";
 import "./stylesheets/index.css";
 
-const element: HTMLElement = document.getElementById("root");
+const element: HTMLElement | null = document.getElementById("root");
 const ConnectedApp = (
   <Provider store={configureStore()}>
     <App />

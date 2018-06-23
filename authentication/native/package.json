@@ -1,13 +1,13 @@
 {
-  "name": "native",
+  "name": "auth-native",
   "version": "1.0.0",
   "author": "eduardomoroni",
   "license": "MIT",
   "scripts": {
+    "preinstall": "cd ../core && npm run build",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
-    "android": "react-native run-android",
-    "preinstall": "cd ../core && npm run build"
+    "android": "react-native run-android"
   },
   "dependencies": {
     "core": "file:../core",

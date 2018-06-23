@@ -1,11 +1,10 @@
 {
+  "description": "Working example to apply clean architecture to react codebases",
   "name": "react-clean-reusable-architecture",
   "version": "1.0.0",
-  "description": "Working example to apply clean architecture to react codebases",
-  "main": "index.js",
-  "scripts": {
-    "prettier": "prettier --write '**/src/**/*.ts?(x)'"
-  },
+  "author": "eduardomoroni",
+  "license": "MIT",
+  "homepage": "https://github.com/eduardomoroni/react-reusable-clean-architecture#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eduardomoroni/react-reusable-clean-architecture.git"
@@ -16,12 +15,9 @@
     "clean-architecture",
     "boilerplate"
   ],
-  "author": "eduardomoroni",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eduardomoroni/react-reusable-clean-architecture/issues"
+  "scripts": {
+    "prettier": "prettier --write '**/src/**/*.ts?(x)'"
   },
-  "homepage": "https://github.com/eduardomoroni/react-reusable-clean-architecture#readme",
   "devDependencies": {
     "prettier": "1.13.5",
     "prettierrc": "0.0.0-5"

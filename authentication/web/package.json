@@ -1,8 +1,12 @@
 {
-  "name": "web",
+  "name": "auth-web",
   "version": "1.0.0",
   "author": "eduardomoroni",
   "license": "MIT",
+  "scripts": {
+    "preinstall": "cd ../core && npm run build",
+    "start": "react-scripts-ts start"
+  },
   "dependencies": {
     "core": "file:../core",
     "react": "16.4.1",
@@ -10,13 +14,6 @@
     "react-redux": "5.0.7",
     "react-scripts-ts": "2.16.0",
     "redux": "4.0.0"
-  },
-  "scripts": {
-    "preinstall": "cd ../core && npm run build",
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
     "@types/jest": "23.1.1",
