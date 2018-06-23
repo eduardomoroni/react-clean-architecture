@@ -1,11 +1,12 @@
 import * as React from "react";
-import "../stylesheets/App.css";
 import {connect} from "react-redux";
+import {Credential, signInAction, StateType, User, userSelector} from "core";
+
+import "../stylesheets/App.css";
 import {Header} from "./Header";
 import {AppWrapper} from "./AppWrapper";
 import {UserComponent} from "./UserComponent";
-import {Credential, signInAction, StateType, User, userSelector} from "core";
-import {SignInButton} from "./SignInButton";
+import {SignComponent} from "./SignComponent";
 
 interface Props {
   user: User | null,
@@ -13,13 +14,13 @@ interface Props {
 }
 
 export const AppModel = (props: Props) => {
-  const onLogin = () => props.dispatchSignIn(new Credential('email@email.com', '123abc'));
+  const onLogin = (email: string, password: string) => props.dispatchSignIn(new Credential(email, password));
 
   return (
     <AppWrapper>
       <Header />
       <UserComponent user={props.user} />
-      <SignInButton onClicked={onLogin}/>
+      <SignComponent onClick={onLogin}/>
     </AppWrapper>
   );
 };

@@ -16,5 +16,9 @@ export const UserComponent = (props: PropsType) => {
         Email is: { props.user.email }
       </h1>
     </div>
-  ): <div />;
+  ): (
+    <h1>
+      No user Logged In
+    </h1>
+  );
 };
