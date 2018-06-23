@@ -1,8 +1,11 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import {createLogger} from "redux-logger";
 import createSagaMiddleware from 'redux-saga';
-import {rootSaga} from "../adapters/redux/saga";
-import {rootReducer} from "../adapters/redux/reducer";
+import {rootSaga, userReducer} from "../adapters/redux";
+
+const rootReducer = {
+  user: userReducer,
+};
 
 export const configureStore = () => {
   const middleware = [];

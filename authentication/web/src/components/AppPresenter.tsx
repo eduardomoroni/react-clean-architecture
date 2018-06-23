@@ -1,36 +1,35 @@
-import {Counter, counterSelector, decrementCounterAction, incrementCounterAction, StateType,} from "core"
 import * as React from "react";
 import "../stylesheets/App.css";
 import {connect} from "react-redux";
 import {Header} from "./Header";
-import {CounterComponent} from "./Counter";
 import {AppWrapper} from "./AppWrapper";
+import {UserComponent} from "./UserComponent";
+import {Credential, signInAction, StateType, User, userSelector} from "core";
+import {SignInButton} from "./SignInButton";
 
 interface Props {
-  counter: Counter,
-  decrement: (qty: number) => void,
-  increment: (qty: number) => void,
+  user?: User,
+  dispatchSignIn: (credential: Credential) => void;
 }
 
 export const AppModel = (props: Props) => {
-  const increment = () => props.increment(1);
-  const decrement = () => props.decrement(1);
+  const onLogin = () => props.dispatchSignIn(new Credential('email@email.com', '123abc'));
 
   return (
     <AppWrapper>
       <Header />
-      <CounterComponent decrement={decrement} increment={increment} counter={props.counter.count}/>
+      <UserComponent user={props.user} />
+      <SignInButton onClicked={onLogin}/>
     </AppWrapper>
   );
 };
 
 const mapStateToProps = (state: StateType) => ({
-  counter: counterSelector(state),
+  user: userSelector(state),
 });
 
 const mapDispatchToProps = {
-  decrement: decrementCounterAction,
-  increment: incrementCounterAction,
+  dispatchSignIn: signInAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppModel);

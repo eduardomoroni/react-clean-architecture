@@ -1,8 +1,8 @@
-import { takeLatest, put, call, all } from 'redux-saga/effects';
+import {all, call, put, takeLatest} from 'redux-saga/effects';
 import {Credential} from "../../entities";
 import {updateUserAction} from "./user";
 import {SignInInteractor} from "../../useCases";
-import {SampleService} from "../../services/SampleService";
+import {SampleService} from "../../services";
 
 export const SIGN_IN = 'user/saga/sign_in';
 
@@ -11,7 +11,7 @@ interface SignInActionType {
   credential: Credential,
 }
 
-const signInAction = (credential: Credential): SignInActionType => ({
+export const signInAction = (credential: Credential): SignInActionType => ({
   type: SIGN_IN,
   credential
 });
@@ -20,10 +20,8 @@ function* signInSaga(action: SignInActionType) {
   try {
     const service = new SampleService();
     const interactor = new SignInInteractor(service);
-    const user = yield call(
-      interactor.signIn,
-      action.credential,
-    );
+
+    const user = yield interactor.signIn(action.credential);
     yield put(updateUserAction(user));
   } catch (error) {
     console.error(error);
