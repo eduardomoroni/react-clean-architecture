@@ -1,11 +1,13 @@
 # React Clean Architecture
-I'm on my way to write (and code) a realistic way of achieving reusing domain between both native and web apps.
-I'll use and adaptation of Clean Architecture and some Domain-driven design principles.
+Applying clean architecture to a react codebase brings lots of benefits, most of them you can find by simple googling what's clean architecture and what should we adopt architectural patterns.
+One advantage that strikes me is having business rules isolated from framework specific things. This means that our core logic is not coupled to React, React Native, Express, etc...
+This gives you enough flexibility to, for example, move specific parts of the application to a backend, change libraries without too much pain, test once and reuse as many times as you want, share code between React and React native applications, among others. 
 This is a realistic approach, what I mean by that is: It's simple enough to be applicable and Robust enough to have it in a production environment.
+Although I have greatly simplified it, for educational purposes, I believe that this example is of great value to get you started with applying architectural patterns and adapting them to your own needs.  
 
-## Work in progress (almost finished)
+## Detailed explanation
 I've been pretty busy lately, so I'll write as much as possible.
-I'll write a blog post saying What is Clean Architecture, Why adopt it and how.
+I'll write three blog posts explaining better saying What is Clean Architecture, Why adopt it and how.
 
 ## Philosophy
 ![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)  
