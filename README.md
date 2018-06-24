@@ -10,7 +10,7 @@ I'll write a blog post saying What is Clean Architecture, Why adopt it and how.
 ## Philosophy
 ![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)  
 
-The nomenclature may vary, but the concept behind this architectural pattern is: the domain dictate how tools should be organized and not the other way around.
+The nomenclature may vary, but the concept behind this architectural pattern is: the domain dictates how tools should be organized and not the other way around.
 What I mean by that is that we should organize our codebase around the business rules and not around the frameworks we use to achieve business rules.
 The diagram above shows how the dependency rule works, the inner circles must not know about the outer circles. That is, there cannot be an import of a use case within an entity, or import of a framework within a use case.
 Another important rule is: entities and use cases should not rely on external libraries. The explanation is simple, the core of our application must be robust enough and malleable enough to meet the demands of the business without needing any external intervention.
