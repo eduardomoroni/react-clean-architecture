@@ -51,6 +51,8 @@ This repository contains 2 examples of how to implement react following clean ar
 *Note:* frameworks folder is basically framework setup to have it available to the adapters.  
 
 ## Sample apps DEMO
+A great advantage of following clean architecture is having all business logic self-contained and closer, in a readable way.  
+Take a look at `core/entities/` and `core/useCases/` folders and see for yourself.
 ### Counter
 Counter app is a simple example of how to apply clean architecture to react world, it uses only synchronous actions and has no external dependencies.  
 It contains a single business rule: 
@@ -68,6 +70,8 @@ It contains some shared business rules:
 - The app must use an external dependency to persist user register.  
 
 ![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)  
+
+---  
 
 ## References
 - [Clean Architecture: a craftsman's guide to software structure and design](https://goo.gl/2h3fsD)
