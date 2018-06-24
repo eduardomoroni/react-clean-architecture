@@ -1,10 +1,13 @@
 import * as React from "react";
-import { Button } from "react-native";
+import { Button, Text, TouchableOpacity } from "react-native";
+import { styles } from "../stylesheets/styles";
 
 interface PropsType {
   onClick: () => void;
 }
 
 export const SignOutButton = (props: PropsType) => (
-  <Button onPress={props.onClick} title="Sign Out" color="#841584" />
+  <TouchableOpacity style={styles.button} onPress={props.onClick}>
+    <Text>Sign Out</Text>
+  </TouchableOpacity>
 );

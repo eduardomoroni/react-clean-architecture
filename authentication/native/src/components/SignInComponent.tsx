@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Button, TextInput, View } from "react-native";
+import { Button, Text, TextInput, View } from "react-native";
+import { styles } from "../stylesheets/styles";
 
 interface PropsType {
   onClick: (email: string, password: string) => void;
@@ -31,24 +32,32 @@ export class SignInComponent extends React.Component<PropsType, StateType> {
 
   render() {
     return (
-      <View>
-        <TextInput
-          autoFocus
-          autoCapitalize="none"
-          blurOnSubmit={false}
-          keyboardType="email-address"
-          onChangeText={this.handleChangeEmail}
-          placeholder="Email address"
-          value={this.state.email}
-        />
-        <TextInput
-          onChangeText={this.handleChangePassword}
-          onSubmitEditing={this.handleSubmit}
-          placeholder="Password"
-          returnKeyType={"done"}
-          secureTextEntry
-          value={this.state.password}
-        />
+      <View style={{ flex: 1 }}>
+        <View style={styles.textInputContainer}>
+          <Text style={styles.textLabel}>Email Address:</Text>
+          <TextInput
+            style={styles.textInput}
+            autoFocus
+            autoCapitalize="none"
+            blurOnSubmit={false}
+            keyboardType="email-address"
+            onChangeText={this.handleChangeEmail}
+            placeholder="Email address"
+            value={this.state.email}
+          />
+        </View>
+        <View style={styles.textInputContainer}>
+          <Text style={styles.textLabel}>Password:</Text>
+          <TextInput
+            style={styles.textInput}
+            onChangeText={this.handleChangePassword}
+            onSubmitEditing={this.handleSubmit}
+            placeholder="Password"
+            returnKeyType={"done"}
+            secureTextEntry
+            value={this.state.password}
+          />
+        </View>
         <Button onPress={this.handleSubmit} title="Sign In" color="#841584" />
       </View>
     );
