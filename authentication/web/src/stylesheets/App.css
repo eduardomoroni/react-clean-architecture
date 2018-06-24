@@ -30,3 +30,13 @@
 form {
   margin: 20px;
 }
+
+label {
+  display: block;
+  margin: 5px;
+  width: 100%;
+}
+
+input {
+  width: 75%;
+}

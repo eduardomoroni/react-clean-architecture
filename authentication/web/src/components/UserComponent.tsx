@@ -9,8 +9,8 @@ interface PropsType {
 export const UserComponent = (props: PropsType) => {
   return props.user ? (
     <div>
-      <h1>Name is: {props.user.name}</h1>
-      <h1>Email is: {props.user.email}</h1>
+      <h3>Name is: {props.user.name}</h3>
+      <h3>Email is: {props.user.email}</h3>
     </div>
   ) : (
     <h1>No user Logged In</h1>
