@@ -50,6 +50,12 @@ This repository contains 2 examples of how to implement react following clean ar
 
 *Note:* frameworks folder is basically initial configuration to have a framework available to the adapters.
 
+## Sample apps DEMO
+### Counter
+![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)
+### Authentication
+![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)
+
 ## References
 - [Clean Architecture: a craftsman's guide to software structure and design](https://goo.gl/2h3fsD)
 - [The clean architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
