@@ -8,7 +8,8 @@ I've been pretty busy lately, so I'll write as much as possible.
 I'll write a blog post saying What is Clean Architecture, Why adopt it and how.
 
 ## Philosophy
-![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)
+![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)  
+
 The nomenclature may vary, but the concept behind this architectural pattern is: the domain dictate how tools should be organized and not the other way around.
 What I mean by that is that we should organize our codebase around the business rules and not around the frameworks we use to achieve business rules.
 The diagram above shows how the dependency rule works, the inner circles must not know about the outer circles. That is, there cannot be an import of a use case within an entity, or import of a framework within a use case.
@@ -16,7 +17,7 @@ Another important rule is: entities and use cases should not rely on external li
 If by chance, an essential part of the application core MUST BE an external dependency. Dependency needs to be modeled following [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle).
 
 ## Communication flow
-![communication-flow-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/communication-flow.jpg)
+![communication-flow-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/communication-flow.jpg)  
 
 ### A brief explanation of each responsibility
 - Entity: Application independent business rules
@@ -52,9 +53,10 @@ This repository contains 2 examples of how to implement react following clean ar
 
 ## Sample apps DEMO
 ### Counter
-![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)
+![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)  
+
 ### Authentication
-![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)
+![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)  
 
 ## References
 - [Clean Architecture: a craftsman's guide to software structure and design](https://goo.gl/2h3fsD)
