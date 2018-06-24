@@ -1,4 +1,4 @@
-import {Credential, User} from "../entities";
+import { Credential, User } from "../entities";
 
 export interface SignInService {
   signInWithCredential: (credential: Credential) => Promise<User>;
@@ -7,8 +7,8 @@ export interface SignInService {
 export class SignInInteractor {
   signInService: SignInService;
 
-  constructor(signInService: SignInService){
-    this.signInService =  signInService;
+  constructor(signInService: SignInService) {
+    this.signInService = signInService;
   }
 
   async signIn(credential: Credential): Promise<User> {

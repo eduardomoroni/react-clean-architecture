@@ -17,21 +17,27 @@ export const counterSelector = (state: StateType): Counter => state.counter;
 
 export const incrementCounterAction = (qty: number): ActionType => ({
   type: INCREMENT,
-  qty
+  qty,
 });
 
 export const decrementCounterAction = (qty: number): ActionType => ({
   type: DECREMENT,
-  qty
+  qty,
 });
 
-const incrementReducer = (state: StateSliceType, action: ActionType): StateSliceType => {
+const incrementReducer = (
+  state: StateSliceType,
+  action: ActionType,
+): StateSliceType => {
   const interactor = new CounterInteractor(state);
   interactor.increment(action.qty);
   return new Counter(interactor.counter.count);
 };
 
-const decrementReducer = (state: StateSliceType, action: ActionType): StateSliceType => {
+const decrementReducer = (
+  state: StateSliceType,
+  action: ActionType,
+): StateSliceType => {
   const interactor = new CounterInteractor(state);
   interactor.decrement(action.qty);
   return new Counter(interactor.counter.count);

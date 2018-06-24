@@ -1,22 +1,22 @@
-import {all, call, put, takeLatest} from 'redux-saga/effects';
-import {Credential, User} from "../../entities";
-import {updateUserAction} from "./user";
-import {SignInInteractor, SignUpInteractor} from "../../useCases";
-import {SampleService} from "../../services";
+import { all, call, put, takeLatest } from "redux-saga/effects";
+import { Credential, User } from "../../entities";
+import { updateUserAction } from "./user";
+import { SignInInteractor, SignUpInteractor } from "../../useCases";
+import { SampleService } from "../../services";
 
-export const SIGN_IN = 'user/saga/sign_in';
-export const SIGN_UP = 'user/saga/sign_up';
+export const SIGN_IN = "user/saga/sign_in";
+export const SIGN_UP = "user/saga/sign_up";
 
 interface SignInActionType {
-  type: string,
-  credential: Credential,
+  type: string;
+  credential: Credential;
 }
 
 interface SignUpActionType {
-  type: string,
-  firstName: string,
-  lastName: string,
-  credential: Credential,
+  type: string;
+  firstName: string;
+  lastName: string;
+  credential: Credential;
 }
 
 export const signInAction = (credential: Credential): SignInActionType => ({
@@ -24,7 +24,11 @@ export const signInAction = (credential: Credential): SignInActionType => ({
   credential,
 });
 
-export const signUpAction = (firstName: string, lastName: string, credential: Credential): SignUpActionType => ({
+export const signUpAction = (
+  firstName: string,
+  lastName: string,
+  credential: Credential,
+): SignUpActionType => ({
   type: SIGN_UP,
   credential,
   firstName,
@@ -60,8 +64,5 @@ function* signUpSaga(action: SignUpActionType) {
 }
 
 export function* rootSaga() {
-  yield all([
-    takeLatest(SIGN_IN, signInSaga),
-    takeLatest(SIGN_UP, signUpSaga),
-  ]);
+  yield all([takeLatest(SIGN_IN, signInSaga), takeLatest(SIGN_UP, signUpSaga)]);
 }

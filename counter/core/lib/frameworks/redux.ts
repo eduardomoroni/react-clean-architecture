@@ -18,8 +18,5 @@ export const configureStore = () => {
     middleware.push(createLogger());
   }
 
-  return createStore(
-    combineReducers(reducers),
-    applyMiddleware(...middleware),
-  );
+  return createStore(combineReducers(reducers), applyMiddleware(...middleware));
 };

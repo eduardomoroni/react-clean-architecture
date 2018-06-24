@@ -5,7 +5,7 @@ export class Email {
 
   constructor(address: string) {
     if (isInvalidAddress(address)) {
-      throw new Error('Invalid email address');
+      throw new Error("Invalid email address");
     } else {
       this.address = address.toLowerCase();
     }

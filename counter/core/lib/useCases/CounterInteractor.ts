@@ -6,7 +6,7 @@ export class CounterInteractor {
   static MIN_SIZE: number = 0;
   counter: Counter;
 
-  constructor(counter?: Counter){
+  constructor(counter?: Counter) {
     if (!counter) {
       this.counter = new Counter(0);
     } else {

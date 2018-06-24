@@ -1,1 +1,1 @@
-export * from "./CounterInteractor"
+export * from "./CounterInteractor";

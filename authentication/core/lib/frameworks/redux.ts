@@ -1,7 +1,7 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
-import {createLogger} from "redux-logger";
-import createSagaMiddleware from 'redux-saga';
-import {rootSaga, userReducer} from "../adapters/redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import { createLogger } from "redux-logger";
+import createSagaMiddleware from "redux-saga";
+import { rootSaga, userReducer } from "../adapters/redux";
 
 const rootReducer = {
   user: userReducer,
