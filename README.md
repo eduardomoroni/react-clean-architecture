@@ -48,14 +48,25 @@ This repository contains 2 examples of how to implement react following clean ar
         ├── components
         └── stylesheets
 ```
-
-*Note:* frameworks folder is basically initial configuration to have a framework available to the adapters.
+*Note:* frameworks folder is basically framework setup to have it available to the adapters.  
 
 ## Sample apps DEMO
 ### Counter
+Counter app is a simple example of how to apply clean architecture to react world, it uses only synchronous actions and has no external dependencies.  
+It contains a single business rule: 
+- The counter can not be negative and can not be greater than 10.  
+
 ![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)  
 
 ### Authentication
+Authentication app is a simple example, but no to simple, of how to apply clean architecture to a realistic scenario.
+It contains some shared business rules:
+- Users must have a valid email.
+- Users password cannot contains anything but numbers and letters.
+- Users name must have full name, and it has to be lower case.
+- The App cannot sign up two users with same email address.
+- The app must use an external dependency to persist user register.  
+
 ![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)  
 
 ## References
