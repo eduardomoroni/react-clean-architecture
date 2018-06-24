@@ -1,12 +1,12 @@
 # React Clean Architecture
 Applying clean architecture to a react codebase brings lots of benefits, most of them you can find by simple googling what's clean architecture and what should we adopt architectural patterns.
-One advantage that strikes me is having business rules isolated from framework specific things. This means that our core logic is not coupled to React, React Native, Express, etc...
-This gives you enough flexibility to, for example, move specific parts of the application to a backend, change libraries without too much pain, test once and reuse as many times as you want, share code between React and React native applications, among others. 
+One advantage that strikes me is having business rules isolated from framework specific things. This means that our core logic is not coupled to React, React Native, Express, etc...  
+This gives you enough flexibility to, for example, move specific parts of the application to a backend, change libraries without too much pain, test once and reuse as many times as you want, share code between React and React native applications, among others.   
 This is a realistic approach, what I mean by that is: It's simple enough to be applicable and Robust enough to have it in a production environment.
-Although I have greatly simplified it, for educational purposes, I believe that this example is of great value to get you started with applying architectural patterns and adapting them to your own needs.  
+Although I have greatly simplified it, for educational purposes, I believe that this example is of great value to get you started with applying architectural patterns and adapting them to your own needs.    
 
 ## Detailed explanation
-I've been pretty busy lately, so I'll write as much as possible.
+I've been pretty busy lately, so I'll write as much as possible.  
 I'll write three blog posts explaining better saying What is Clean Architecture, Why adopt it and how.
 
 ## Philosophy
@@ -28,6 +28,32 @@ If by chance, an essential part of the application core MUST BE an external depe
   e. g.: We have to connect interactor with react container, to do so, we have to connect interactor with redux (framework) and then connect redux to container components.
 - Presenter: Maps data from/to adapter to/from components.
 - Components: Simplest possible unit of presentation. Any mapping, conversion, MUST be done by presenter.
+
+## Sample apps DEMO
+Talk is cheap, don't you think? That's why I'm sharing two sample apps to facilitate your digestion.  
+A great advantage of following clean architecture is having all business logic self-contained and closer, in a readable way.  
+Take a look at `core/entities/` and `core/useCases/` folders and see for yourself.
+### Counter
+Counter app is a simple example of how to apply clean architecture to react world, it uses only synchronous actions and has no external dependencies.  
+It contains a single business rule: 
+- The counter can not be negative and can not be greater than 10.  
+
+![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)  
+
+---  
+
+### Authentication
+Authentication app is a simple example, but no to simple, of how to apply clean architecture to a realistic scenario.
+It contains some shared business rules:
+- Users must have a valid email.
+- Users password cannot contains anything but numbers and letters.
+- Users name must have full name, and it has to be lower case.
+- The App cannot sign up two users with same email address.
+- The app must use an external dependency to persist user register.  
+
+![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)  
+
+---  
 
 ## Folder Structure
 This repository contains 2 examples of how to implement react following clean architecture, both follow same folder structure which represents diagram showed above.
@@ -52,29 +78,6 @@ This repository contains 2 examples of how to implement react following clean ar
 ```
 *Note:* frameworks folder is basically framework setup to have it available to the adapters.  
 
-## Sample apps DEMO
-A great advantage of following clean architecture is having all business logic self-contained and closer, in a readable way.  
-Take a look at `core/entities/` and `core/useCases/` folders and see for yourself.
-### Counter
-Counter app is a simple example of how to apply clean architecture to react world, it uses only synchronous actions and has no external dependencies.  
-It contains a single business rule: 
-- The counter can not be negative and can not be greater than 10.  
-
-![counter-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/counter.gif)  
-
-### Authentication
-Authentication app is a simple example, but no to simple, of how to apply clean architecture to a realistic scenario.
-It contains some shared business rules:
-- Users must have a valid email.
-- Users password cannot contains anything but numbers and letters.
-- Users name must have full name, and it has to be lower case.
-- The App cannot sign up two users with same email address.
-- The app must use an external dependency to persist user register.  
-
-![authentication-gif](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/authentication.gif)  
-
----  
-
 ## References
 - [Clean Architecture: a craftsman's guide to software structure and design](https://goo.gl/2h3fsD)
 - [The clean architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
@@ -85,3 +88,6 @@ It contains some shared business rules:
 ## Thanks
 - Microsoft for provide a typescript [react native](https://github.com/Microsoft/TypeScript-React-Native-Starter) starter kit.
 - [Will Monk](https://github.com/wmonk) for provide a typescript [react](https://github.com/wmonk/create-react-app-typescript) starter kit.
+
+## Feedback
+If something looks odd, don't hesitate to reach me out or opening an issue.
