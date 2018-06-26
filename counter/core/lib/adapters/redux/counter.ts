@@ -26,19 +26,19 @@ export const decrementCounterAction = (qty: number): ActionType => ({
 });
 
 const incrementReducer = (
-  state: StateSliceType,
+  counter: StateSliceType,
   action: ActionType,
 ): StateSliceType => {
-  const interactor = new CounterInteractor(state);
+  const interactor = new CounterInteractor(counter);
   interactor.increment(action.qty);
   return new Counter(interactor.counter.count);
 };
 
 const decrementReducer = (
-  state: StateSliceType,
+  counter: StateSliceType,
   action: ActionType,
 ): StateSliceType => {
-  const interactor = new CounterInteractor(state);
+  const interactor = new CounterInteractor(counter);
   interactor.decrement(action.qty);
   return new Counter(interactor.counter.count);
 };
