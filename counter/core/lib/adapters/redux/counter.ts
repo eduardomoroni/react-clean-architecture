@@ -29,7 +29,7 @@ const incrementReducer = (
   counter: StateSliceType,
   action: ActionType,
 ): StateSliceType => {
-  const interactor = new CounterInteractor(counter);
+  const interactor = new CounterInteractor(counter.count);
   interactor.increment(action.qty);
   return new Counter(interactor.counter.count);
 };
@@ -38,7 +38,7 @@ const decrementReducer = (
   counter: StateSliceType,
   action: ActionType,
 ): StateSliceType => {
-  const interactor = new CounterInteractor(counter);
+  const interactor = new CounterInteractor(counter.count);
   interactor.decrement(action.qty);
   return new Counter(interactor.counter.count);
 };

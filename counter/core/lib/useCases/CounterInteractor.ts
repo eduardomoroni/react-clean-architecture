@@ -2,23 +2,25 @@ import { Counter } from "../entities";
 
 // For sake of simplicity, I"ll keep more than one use case on this interactor
 export class CounterInteractor {
-  static MAX_SIZE: number = 10;
-  static MIN_SIZE: number = 0;
+  higherBound: number = 10;
+  lowerBound: number = 0;
   counter: Counter;
 
-  constructor(counter?: Counter) {
-    if (!counter) {
-      this.counter = new Counter(0);
-    } else {
-      this.counter = counter;
-    }
+  constructor(
+    startNumber: number,
+    lowerBound: number = 0,
+    higherBound: number = 10
+  ) {
+      this.counter = new Counter(startNumber);
+      this.lowerBound = lowerBound;
+      this.higherBound = higherBound;
   }
 
   increment(qty?: number): Counter {
     this.counter.increment(qty);
 
-    if (this.counter.count >= CounterInteractor.MAX_SIZE) {
-      this.counter = new Counter(CounterInteractor.MAX_SIZE);
+    if (this.counter.count >= this.higherBound) {
+      this.counter = new Counter(this.higherBound);
     }
 
     return this.counter;
@@ -27,8 +29,8 @@ export class CounterInteractor {
   decrement(qty?: number): Counter {
     this.counter.decrement(qty);
 
-    if (this.counter.count <= CounterInteractor.MIN_SIZE) {
-      this.counter = new Counter(CounterInteractor.MIN_SIZE);
+    if (this.counter.count <= this.lowerBound) {
+      this.counter = new Counter(this.lowerBound);
     }
 
     return this.counter;
