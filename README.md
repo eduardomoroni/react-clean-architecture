@@ -8,6 +8,7 @@ Although I have greatly simplified it, for educational purposes, I believe that 
 ## Detailed explanation
 I've been pretty busy lately, so I'll write as much as possible.  
 I'll write three blog posts explaining better saying What is Clean Architecture, Why adopt it and how.
+Portuguese version of How to implement clean architecture for React codebases can be found [HERE](https://medium.com/@eduardomoroni/arquitetura-limpa-para-bases-de-c%C3%B3digo-react-df0f78d2b42e)
 
 ## Philosophy
 ![high-level-diagram](https://github.com/eduardomoroni/react-clean-architecture/blob/master/docs/images/high-level-diagram.jpg)  
