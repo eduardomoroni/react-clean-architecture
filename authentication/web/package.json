@@ -4,7 +4,8 @@
   "author": "eduardomoroni",
   "license": "MIT",
   "scripts": {
-    "preinstall": "cd ../core && npm run build",
+    "preinstall": "cd ../core && npm install",
+    "prestart": "cd ../core && npm run build",
     "start": "react-scripts-ts start"
   },
   "dependencies": {
