@@ -82,6 +82,10 @@ This repository contains 2 examples of how to implement react following clean ar
 ## How to Run
 run `npm install` under the project you'd like to run, and then run `npm start`.
 
+### How to run on Windows.
+
+There's an [issue](https://github.com/eduardomoroni/react-clean-architecture/issues/2) related to how yarn/npm symlink file dependencies on windows. Due to this issue, you should first go under the `core` module and run `npm install` and `npm run build`. This will make the `core` module ready to be installed on the other modules.
+
 ## References
 - [Clean Architecture: a craftsman's guide to software structure and design](https://goo.gl/2h3fsD)
 - [The clean architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
