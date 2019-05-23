@@ -11,7 +11,7 @@
   "dependencies": {
     "core": "file:../core",
     "react": "16.4.1",
-    "react-dom": "16.4.1",
+    "react-dom": "16.4.2",
     "react-redux": "5.0.7",
     "react-scripts-ts": "2.16.0",
     "redux": "4.0.0"
