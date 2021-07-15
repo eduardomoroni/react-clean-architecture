@@ -42,7 +42,4 @@ const mapDispatchToProps = {
   increment: incrementCounterAction,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AppModel);
+export default connect(mapStateToProps, mapDispatchToProps)(AppModel);
