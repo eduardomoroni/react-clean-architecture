@@ -1,27 +1,42 @@
 {
-  "name": "auth-web",
-  "version": "1.0.0",
-  "author": "eduardomoroni",
-  "license": "MIT",
-  "scripts": {
-    "preinstall": "cd ../core && npm install",
-    "prestart": "cd ../core && npm run build",
-    "start": "react-scripts-ts start"
-  },
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "core": "file:../core",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
-    "react-redux": "5.0.7",
-    "react-scripts-ts": "2.17.0",
-    "redux": "4.0.0"
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.0",
+    "react-scripts": "4.0.3",
+    "typescript": "~4.1.5"
   },
-  "devDependencies": {
-    "@types/jest": "23.1.1",
-    "@types/node": "10.3.4",
-    "@types/react": "16.4.1",
-    "@types/react-dom": "16.0.6",
-    "@types/react-redux": "6.0.2",
-    "typescript": "2.9.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
