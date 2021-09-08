@@ -1,3 +1,9 @@
+## Word of advice
+This is an example repo, I wouldn't do exactly like this in production. I am just share one way this could be done, may not be the best, but it's a realistic way. I Recommend looking for other implementations as well to complement your research. The repo is also a bit outdated and many conventions have changed over time.
+
+### Examples (please create a PR adding any other example you have)
+- https://github.com/bespoyasov/frontend-clean-architecture
+
 # React Clean Architecture
 Applying clean architecture to a react codebase brings lots of benefits, most of them you can find by simply googling what's clean architecture and what should we adopt architectural patterns.
 One advantage that strikes me is having business rules isolated from framework-specific things. This means that our core logic is not coupled to React, React Native, Express, etc...  
