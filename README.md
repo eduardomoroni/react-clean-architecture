@@ -3,6 +3,7 @@ This is an example repo, I wouldn't do exactly like this in production. I am jus
 
 ### Examples (please create a PR adding any other example you have)
 - https://github.com/bespoyasov/frontend-clean-architecture
+- https://betterprogramming.pub/how-to-implement-a-typescript-web-app-with-clean-architecture-27c7eb745ab4
 
 # React Clean Architecture
 Applying clean architecture to a react codebase brings lots of benefits, most of them you can find by simply googling what's clean architecture and what should we adopt architectural patterns.
