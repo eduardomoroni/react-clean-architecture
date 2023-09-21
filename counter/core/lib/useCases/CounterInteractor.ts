@@ -9,15 +9,19 @@ export class CounterInteractor {
   constructor(
     startNumber: number,
     lowerBound: number = 0,
-    higherBound: number = 10
+    higherBound: number = 10,
   ) {
-      this.counter = new Counter(startNumber);
-      this.lowerBound = lowerBound;
-      this.higherBound = higherBound;
+    this.counter = new Counter(startNumber);
+    this.lowerBound = lowerBound;
+    this.higherBound = higherBound;
   }
 
   increment(qty?: number): Counter {
-    this.counter.increment(qty);
+    if (qty) {
+      this.counter.increment(qty);
+    } else {
+      this.counter.increment(1);
+    }
 
     if (this.counter.count >= this.higherBound) {
       this.counter = new Counter(this.higherBound);
@@ -27,7 +31,11 @@ export class CounterInteractor {
   }
 
   decrement(qty?: number): Counter {
-    this.counter.decrement(qty);
+    if (qty) {
+      this.counter.decrement(qty);
+    } else {
+      this.counter.decrement(1);
+    }
 
     if (this.counter.count <= this.lowerBound) {
       this.counter = new Counter(this.lowerBound);
